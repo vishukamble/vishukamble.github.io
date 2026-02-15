@@ -80,15 +80,18 @@ nav {
     right: 0;
     z-index: 1000;
     padding: 0 2rem;
-    height: 70px;
-    display: flex;
+    height: 80px; /* Made slightly taller to fit the new boxes */
+
+    /* THE MAGIC TRICK for perfect centering */
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
-    background: rgba(11, 18, 25, 0.8);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
+
+    /* No background on the full bar anymore (cleaner look) */
+    background: transparent;
 }
 
+/* 1. Left: The Logo */
 .nav-brand {
     display: flex;
     align-items: center;
@@ -96,29 +99,65 @@ nav {
     font-weight: 600;
     font-size: 1.1rem;
     color: var(--text-primary);
+
+    /* Glass background just for the logo area */
+    background: rgba(11, 18, 25, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: 50px;
+    width: fit-content;
 }
 
-/* Logo Sizing */
 .nav-brand-logo {
     width: 32px;
     height: 32px;
 }
 
+/* 2. Center: The "Floating Dock" Menu */
 .nav-links {
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    gap: 6px; /* Space between buttons */
+
+    /* The "Big Box" Container */
+    background: rgba(11, 18, 25, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    padding: 6px; /* Padding inside the dock */
+    border-radius: 100px; /* Pill shape */
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3); /* Nice floating shadow */
 }
 
+/* 3. The Individual Links (Buttons) */
 .nav-links a {
     color: var(--text-secondary);
     font-size: 0.95rem;
-    font-weight: 400;
-    transition: var(--transition);
+    font-weight: 500;
+    text-decoration: none;
+
+    /* Making them look like big buttons */
+    padding: 10px 24px;
+    border-radius: 50px;
+    transition: all 0.2s ease;
 }
 
+/* Hover Effect */
 .nav-links a:hover {
-    color: var(--blue);
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.08); /* Subtle light up */
+    transform: translateY(-1px);
 }
+
+/* Optional: Active State (you can add class="active" in HTML to current section) */
+.nav-links a.active {
+    background: var(--blue-bg);
+    color: var(--blue);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* 4. Right: Empty area (needed for the grid trick) */
+/* We don't need CSS here, the grid handles the empty space automatically */
 
 /* --- Hero Section --- */
 .hero {
@@ -202,6 +241,42 @@ nav {
     animation: pulse 2s infinite;
 }
 
+.scroll-cta {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    text-decoration: none; /* Removes underline */
+    cursor: pointer;       /* Shows hand cursor */
+    animation: fadeUp 0.6s 1s forwards; /* Delays appearance slightly */
+    z-index: 10;
+}
+
+.scroll-cta span {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.scroll-cta:hover span {
+    color: var(--blue); /* Turns blue on hover */
+}
+
+.scroll-cta-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--blue), transparent);
+    animation: scrollPulse 2s infinite;
+}
+
 .company-link {
     font-weight: 600;
     color: var(--blue);
@@ -255,6 +330,9 @@ nav {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
+    /* Changed from 16px to 2.5rem (40px) to give it breathing room */
+    margin-top: 2.5rem;
+    margin-bottom: 2rem; /* Added bottom margin so it doesn't hit the buttons/stats */
 }
 
 .hero-meta-item {
