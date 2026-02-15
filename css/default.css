@@ -502,6 +502,10 @@ nav {
     border-radius: var(--radius-sm);
     padding: 1.75rem;
     transition: var(--transition);
+
+    display: flex;              /* 1. Turn on Flexbox */
+    flex-direction: column;     /* 2. Stack items vertically */
+    height: 100%;               /* 3. Force card to fill the grid cell */
 }
 
 .achievement:hover {
@@ -529,6 +533,7 @@ nav {
     font-size: 1rem; /* Scaled up for readability */
     color: var(--text-secondary);
     line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 .achievement-metric {
@@ -541,6 +546,8 @@ nav {
     font-size: 0.85rem;
     font-weight: 600;
     font-family: var(--font-mono);
+    margin-top: auto;
+    width: fit-content;
 }
 
 /* --- Skills Grid --- */
