@@ -1,72 +1,13 @@
-# GitHub Activity Stream Widget
+# Vishwanath Kamble — Site Reliability Engineer
 
-This is a small Javascript plugin that creates a stream of your recent GitHub activity. It displays the user's name, username, photo, and a list of each individual activity type. Click [here](https://caseyscarborough.github.io/github-activity) for a demo.
+[![Build Status](https://github.com/vishukamble/vishu.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/vishukamble/vishu.github.io/actions)
+[![Deployment](https://img.shields.io/website?url=https%3A%2F%2Fvishukamble.info&up_message=Online&down_message=Offline&label=Status)](https://vishukamble.info)
 
-A sample image of the activity stream is shown below:
+### 🔴 Live Site: [vishukamble.info](https://vishukamble.info)
 
-![](https://raw.githubusercontent.com/caseyscarborough/github-activity/gh-pages/images/matz.png)
+This repository hosts the source code for my personal portfolio and resume.
 
-### Dependencies
+It is built with **zero dependencies**—just semantic HTML5, modern CSS3, and vanilla JavaScript—deployed automatically via GitHub Actions.
 
-The two dependencies for the plugin are the [Mustache](https://github.com/janl/mustache.js/) templating library and [Octicons](https://octicons.github.com/) (if you want the icons to show). You can include these along with the scripts for the plugin in the head of your page with the following HTML:
-
-```html
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-<link rel="stylesheet" href="github-activity-0.1.1.min.css">
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-<script type="text/javascript" src="github-activity-0.1.1.min.js"></script>
-```
-
-The files can be downloaded from the [dist](https://github.com/caseyscarborough/github-activity/tree/master/dist) directory.
-
-If you'd like to build the files yourself:
-
-```bash
-# Ensure you have grunt and bower installed
-npm install bower
-npm install grunt-cli
-
-# Clone the repository
-git clone https://github.com/caseyscarborough/github-activity.git
-cd github-activity
-
-# Install dependencies
-bower install
-
-# Build dist
-grunt
-```
-
-## Usage
-
-To use the library, begin by creating a new div with an id in the body of your page:
-
-```html
-<div id="feed"></div>
-```
-
-Then call the feed method via Javascript:
-
-```js
-GitHubActivity.feed({
-	username: "your-username",
-	repository: "your-repo", // optional
-	selector: "#feed",
-	limit: 20 // optional
-});
-```
-
-## Credits
-
-* [MD5 Methods](http://www.myersdaily.org/joseph/javascript/md5-text.html)
-
-## Fork and Enjoy
-
-Please feel free to contribute to the application by following the steps below:
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+---
+*© 2026 Vishwanath Kamble*

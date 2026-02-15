@@ -5,6 +5,7 @@
       <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1" />
     </linearGradient>
   </defs>
+
   <path d="M256 21.6L468.6 123.5V359.1L256 490.4L43.4 359.1V123.5L256 21.6Z"
         fill="none"
         stroke="url(#grad1)"
@@ -20,7 +21,17 @@
   <circle cx="43.4" cy="123.5" r="12" fill="#4ea8f6"/>
 
   <g transform="translate(130, 160)">
-    <path d="M20 0 L90 180 L160 0" fill="none" stroke="#e8edf2" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M190 0 V180 M190 90 L270 0 M190 90 L270 180" fill="none" stroke="#e8edf2" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M20 0 L90 180 L160 0"
+          fill="none"
+          stroke="#4ea8f6"
+          stroke-width="28"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+    <path d="M190 0 V180 M190 90 L270 0 M190 90 L270 180"
+          fill="none"
+          stroke="#4ea8f6"
+          stroke-width="28"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
   </g>
 </svg>
