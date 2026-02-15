@@ -8,13 +8,14 @@
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link href="css/default.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
 
 </head>
 <body>
 <nav>
     <div class="nav-brand">
-        <div class="nav-brand-icon"><span class="material-icons-outlined">terminal</span></div>
+        <img src="logo.svg" alt="VK Logo" class="nav-brand-logo">
         Vishu Kamble
     </div>
     <ul class="nav-links">
@@ -35,7 +36,7 @@
 
             <div class="hero-photo-status">
                 <div class="status-dot" aria-hidden="true"></div>
-                <span class="exp-block-company">SRE @</span>
+                <span style="font-size: 0.9rem; color: var(--text-secondary);">SRE @</span>
                 <a href="https://www.imanage.com/" target="_blank" rel="noopener noreferrer" class="company-link">iManage</a>
             </div>
         </div>
@@ -114,64 +115,6 @@
                 </div>
             </div>
 
-            <div class="exp-preview-grid">
-                <a href="#imanage" class="exp-preview blue">
-                    <div class="exp-preview-top">
-                        <span class="exp-preview-company">iManage</span>
-                        <span class="exp-preview-tag">2023 — Present</span>
-                    </div>
-                    <div class="exp-preview-role">Site Reliability Engineer Specialist</div>
-                    <ul class="exp-preview-bullets">
-                        <li>GPU infrastructure & AI model deployments</li>
-                        <li>Multi-cluster AKS orchestration</li>
-                        <li>Prometheus, ECK & observability at scale</li>
-                    </ul>
-                    <span class="material-icons-outlined arrow-hint">south</span>
-                </a>
-
-                <a href="#instabase" class="exp-preview green">
-                    <div class="exp-preview-top">
-                        <span class="exp-preview-company">Instabase</span>
-                        <span class="exp-preview-tag">2022 — 2023</span>
-                    </div>
-                    <div class="exp-preview-role">Product / Site Reliability Engineer</div>
-                    <ul class="exp-preview-bullets">
-                        <li>Multi-cloud deployments (GCP, AWS, Azure)</li>
-                        <li>87% S3 cost reduction via lifecycle policies</li>
-                        <li>Customer onboarding & production support</li>
-                    </ul>
-                    <span class="material-icons-outlined arrow-hint">south</span>
-                </a>
-
-                <a href="#citadel-sr" class="exp-preview purple">
-                    <div class="exp-preview-top">
-                        <span class="exp-preview-company">Citadel</span>
-                        <span class="exp-preview-tag">2020 — 2022</span>
-                    </div>
-                    <div class="exp-preview-role">Sr. Infrastructure Engineer & SME Linux</div>
-                    <ul class="exp-preview-bullets">
-                        <li>Automated 10,000 tickets in 5 months</li>
-                        <li>Linux SME program lead</li>
-                        <li>Global team mentorship across 4 cities</li>
-                    </ul>
-                    <span class="material-icons-outlined arrow-hint">south</span>
-                </a>
-
-                <a href="#citadel-ops" class="exp-preview orange">
-                    <div class="exp-preview-top">
-                        <span class="exp-preview-company">Citadel</span>
-                        <span class="exp-preview-tag">2016 — 2020</span>
-                    </div>
-                    <div class="exp-preview-role">Infra Ops Developer & Intern</div>
-                    <ul class="exp-preview-bullets">
-                        <li>Built Luna — the go-to infra platform</li>
-                        <li>Real-time network monitoring with Python</li>
-                        <li>Night shift ops across global infrastructure</li>
-                    </ul>
-                    <span class="material-icons-outlined arrow-hint">south</span>
-                </a>
-            </div>
-
             <div class="certs-row">
                 <span class="certs-row-label">Certifications</span>
                 <span class="cert-badge rhcsa"><span class="material-icons-outlined">verified</span> RHCSA</span>
@@ -216,7 +159,7 @@
             <div class="achievement blue">
                 <div class="achievement-icon"><span class="material-icons-outlined">memory</span></div>
                 <div class="achievement-name">GPU Infrastructure & AI Model Deployment</div>
-                <div class="achievement-text">Deployed and managed GPU SKUs across RAVN architecture, testing MIG
+                <div class="achievement-text">Deployed and managed GPU SKUs across old architecture, testing MIG
                     profiles and multiple SKU configurations. Upgraded decommissioned GPUs with newer models,
                     dramatically improving ML inference performance.
                 </div>
@@ -227,21 +170,21 @@
                 <div class="achievement-icon"><span class="material-icons-outlined">hub</span></div>
                 <div class="achievement-name">Multi-Cluster AKS Orchestration</div>
                 <div class="achievement-text">Led comprehensive upgrades of AKS, Istio, and Terraform providers across
-                    three distinct architectures — Intel, NGC, and RAVN. Deployed two new hub clusters from scratch for
-                    NGC environments and onboarded foundational CEM code.
+                    three distinct architectures. Deployed two new hub clusters from scratch for
+                    3 environments and onboarded foundational code for our dev team.
                 </div>
             </div>
             <div class="achievement purple">
-              <div class="achievement-icon monitoring-icon">
-                <span class="material-icons-outlined">query_stats</span>
-              </div>
-              <div class="achievement-name">Observability & ECK Transformation</div>
-              <div class="achievement-text">
-                Developed comprehensive ECK resources — repos, dependent charts, service
-                accounts with minimal permissions, and ArgoCD applications. Implemented
-                Prometheus Push Gateway for ephemeral job metrics, eliminating blind spots
-                in short-lived processes.
-              </div>
+                <div class="achievement-icon monitoring-icon">
+                    <span class="material-icons-outlined">query_stats</span>
+                </div>
+                <div class="achievement-name">Observability & ECK Transformation</div>
+                <div class="achievement-text">
+                    Developed comprehensive ECK resources — repos, dependent charts, service
+                    accounts with minimal permissions, and ArgoCD applications. Implemented
+                    Prometheus Push Gateway for ephemeral job metrics, eliminating blind spots
+                    in short-lived processes.
+                </div>
             </div>
             <div class="achievement orange">
                 <div class="achievement-icon"><span class="material-icons-outlined">smart_toy</span></div>
@@ -262,7 +205,7 @@
             <div class="achievement pink">
                 <div class="achievement-icon"><span class="material-icons-outlined">build</span></div>
                 <div class="achievement-name">SRE Tooling & Automation</div>
-                <div class="achievement-text">Engineered RAVN debug container image with curated troubleshooting tools,
+                <div class="achievement-text">Engineered debug container image with curated troubleshooting tools,
                     reducing MTTR. Built helm-diff PR scripts, AKS logshipper for audit logs, Vault troubleshooting
                     scripts, and automated Azure Blob lifecycle management.
                 </div>
