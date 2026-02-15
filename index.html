@@ -232,39 +232,33 @@
             <div class="achievement green">
                 <div class="achievement-icon"><span class="material-icons-outlined">cloud</span></div>
                 <div class="achievement-name">Multi-Cloud Platform Deployment</div>
-                <div class="achievement-text">Successfully deployed the Instabase tool across GCP, Azure, AWS,
-                    OpenShift, and on-prem environments for multiple enterprise clients. Served as the primary point of
-                    contact for customer onboarding and production support.
+                <div class="achievement-text">Orchestrated the Instabase platform deployment across AWS, Azure, and GCP for three major enterprise clients. Standardized the Terraform modules to support diverse environments (OpenShift vs. Native Cloud), ensuring a consistent delivery pipeline regardless of the underlying infrastructure provider.
                 </div>
+                <div class="achievement-metric"><span class="material-icons-outlined">domain</span> 3 Enterprise Clients</div>
             </div>
+
             <div class="achievement blue">
                 <div class="achievement-icon"><span class="material-icons-outlined">savings</span></div>
                 <div class="achievement-name">S3 Storage Cost Optimization</div>
-                <div class="achievement-text">Reduced S3 storage costs by 87% through implementing lifecycle management
-                    policies, versioning rules, and archiving dead buckets — shrinking storage footprint dramatically.
+                <div class="achievement-text">Reduced S3 storage costs by 87% through implementing lifecycle management policies, versioning rules, and archiving dead buckets. This initiative shrank the storage footprint dramatically without impacting data availability for ongoing customer operations.
                 </div>
-                <div class="achievement-metric"><span class="material-icons-outlined">trending_down</span> 235 TB → 77
-                    TB
-                </div>
+                <div class="achievement-metric"><span class="material-icons-outlined">trending_down</span> 235 TB → 77 TB</div>
             </div>
+
             <div class="achievement orange">
                 <div class="achievement-icon"><span class="material-icons-outlined">notifications_active</span></div>
                 <div class="achievement-name">Real-Time Alerting & EKS Upgrades</div>
-                <div class="achievement-text">Developed a Slack bot for real-time alerts on sandboxes in indeterminate
-                    states. Led EKS upgrades from 1.21 to 1.23, integrating EBS CSI driver addon and transitioning PVCs
-                    from EBS to EFS via Terraform.
+                <div class="achievement-text">Built a Slack bot to monitor "zombie" sandboxes, identifying and decommissioning over 15 stale environments to eliminate cloud waste. Led critical EKS upgrades (1.21 → 1.23) and migrated storage classes from EBS to EFS, ensuring zero downtime for developer workflows.
                 </div>
+                <div class="achievement-metric"><span class="material-icons-outlined">delete_forever</span> 15+ Envs Pruned</div>
             </div>
+
             <div class="achievement purple">
                 <div class="achievement-icon"><span class="material-icons-outlined">cleaning_services</span></div>
                 <div class="achievement-name">Container Image & Security Cleanup</div>
-                <div class="achievement-text">Designed a Python script to identify unused ECR images across active EKS
-                    clusters. Implemented ECR lifecycle policies for automated cleanup and addressed vulnerabilities by
-                    upgrading base images.
+                <div class="achievement-text">Designed a Python script to identify unused ECR images across active EKS clusters. Implemented ECR lifecycle policies for automated cleanup and addressed vulnerabilities by upgrading base images, significantly reducing the attack surface.
                 </div>
-                <div class="achievement-metric"><span class="material-icons-outlined">delete_sweep</span> 140K → 2K
-                    images
-                </div>
+                <div class="achievement-metric"><span class="material-icons-outlined">delete_sweep</span> 140K → 2K Images</div>
             </div>
         </div>
     </div>
@@ -286,34 +280,47 @@
                 <div class="achievement-name">Automation at Scale</div>
                 <div class="achievement-text">Automated ticket handling on Jira and ServiceNow — creating, updating, and
                     closing over 10,000 tickets in 5 months. Engineered scripts to fix YAML config errors across
-                    hundreds of VMs, saving hundreds of hours.
+                    hundreds of VMs, saving hundreds of hours of manual engineering time.
                 </div>
                 <div class="achievement-metric"><span class="material-icons-outlined">confirmation_number</span> 10,000+
                     tickets
                 </div>
             </div>
+
             <div class="achievement blue">
                 <div class="achievement-icon"><span class="material-icons-outlined">school</span></div>
                 <div class="achievement-name">Linux SME Program & Mentorship</div>
-                <div class="achievement-text">Headed the Linux SME program for intermediate troubleshooting and
-                    documentation of best practices. Trained and mentored new hires across Hong Kong, London, Chicago,
-                    and Austin with comprehensive training programs.
+                <div class="achievement-text">Enabled the team's expansion to a 24/7 "Follow-the-Sun" schedule by
+                    standardizing global knowledge. Authored 80+ Wiki pages of deep-dive troubleshooting guides and
+                    SOPs. Personally trained 7 new hires across Austin, Chicago, London, and Hong Kong—traveling
+                    internationally to ensure consistent operational standards.
+                </div>
+                <div class="achievement-metric"><span class="material-icons-outlined">public</span> Global Training Lead
                 </div>
             </div>
+
             <div class="achievement green">
                 <div class="achievement-icon"><span class="material-icons-outlined">schedule</span></div>
                 <div class="achievement-name">Server Hardware Lifecycle</div>
-                <div class="achievement-text">Designed server hardware process and maintenance reminder code that
-                    removed manual tasks, saving 90% of team time on hardware lifecycle tracking and compliance.
+                <div class="achievement-text">Designed a comprehensive lifecycle tracking system that interfaced with
+                    datacenter inventory APIs. This automation proactively flagged warranty expirations and end-of-life
+                    assets, eliminating manual spreadsheet toil and ensuring 100% compliance with hardware refresh
+                    policies for the global fleet.
                 </div>
                 <div class="achievement-metric"><span class="material-icons-outlined">timer</span> 90% time saved</div>
             </div>
+
             <div class="achievement orange">
-                <div class="achievement-icon"><span class="material-icons-outlined">nightlight</span></div>
-                <div class="achievement-name">Night Shift Operations</div>
-                <div class="achievement-text">Worked night shifts monitoring and administering Citadel's entire
-                    infrastructure — handling Linux and networking troubleshooting, ensuring uptime for one of the
-                    world's largest hedge funds.
+                <div class="achievement-icon"><span class="material-icons-outlined">rule_folder</span></div>
+                <div class="achievement-name">K8s Rollout & Config Hygiene</div>
+                <div class="achievement-text">
+                    Served as the Operations liaison for the "Trailblazer" Kubernetes deployment. Developed automated
+                    sanitation scripts to enforce naming conventions and data sovereignty—programmatically detecting and
+                    moving misfiled server YAMLs (e.g., relocating JPN assets from NYC folders) to their correct
+                    datacenter paths.
+                </div>
+                <div class="achievement-metric">
+                    <span class="material-icons-outlined">support_agent</span> Trailblazer L1 Support
                 </div>
             </div>
         </div>
@@ -333,27 +340,34 @@
         <div class="achievements-grid">
             <div class="achievement orange">
                 <div class="achievement-icon"><span class="material-icons-outlined">dashboard</span></div>
-                <div class="achievement-name">Luna — Infrastructure Management Platform</div>
-                <div class="achievement-text">Built Luna, the go-to internal platform at Citadel — handling port
-                    bounces, description changes, datacenter access requests, storage provisioning, BGP/OSPF checks, and
-                    work tracking. Built with Python, JavaScript, HTML5, and CSS.
+                <div class="achievement-name">Luna — Infra Management Platform</div>
+                <div class="achievement-text">Built the central tooling hub adopted by all infrastructure teams (Windows, Network, Storage). Features included a firm-wide "Server Lookup" (locating specific racks/cabinets) and Zabbix API integration to automate maintenance windows, preventing false alerts during patching.
                 </div>
+                <div class="achievement-metric"><span class="material-icons-outlined">groups</span> 100% Team Adoption</div>
             </div>
+
             <div class="achievement teal">
                 <div class="achievement-icon"><span class="material-icons-outlined">network_check</span></div>
                 <div class="achievement-name">Network Monitoring & Datacenter Ops</div>
-                <div class="achievement-text">Built a real-time monitoring device using REST API in Python for all of
-                    Citadel's network devices. Implemented monitoring for internet, telecom, VPNs, and printers using
-                    Python and Splunk. Administered blade and rack servers.
+                <div class="achievement-text">Developed a custom Python application monitoring over 500 network devices (Cisco, Palo Alto, Arista, Meraki). The tool utilized REST APIs to poll device health in real-time, providing a unified dashboard for internet circuits, VPN tunnels, and telecom status across global offices.
                 </div>
+                <div class="achievement-metric"><span class="material-icons-outlined">router</span> 500+ Devices</div>
             </div>
+
             <div class="achievement purple">
                 <div class="achievement-icon"><span class="material-icons-outlined">lan</span></div>
-                <div class="achievement-name">BGP, Datacenter & Global Support</div>
-                <div class="achievement-text">Implemented code to check BGP peers, get interface details, create
-                    tickets, and notify carriers. Launched management console dashboard for all servers. Provided L1/L2
-                    support to London, Hong Kong, Dublin, and Sydney offices.
+                <div class="achievement-name">Automated Incident Response</div>
+                <div class="achievement-text">Scripted an automated BGP peering check that detected circuit outages instantly. The system auto-created ServiceNow tickets and emailed ISPs with the exact Circuit ID and downtime logs, drastically reducing Mean Time to Detect (MTTD) and eliminating manual vendor triage.
                 </div>
+                <div class="achievement-metric"><span class="material-icons-outlined">bolt</span> Auto-Vendor Ticketing</div>
+            </div>
+
+            <div class="achievement blue">
+                <div class="achievement-icon"><span class="material-icons-outlined">nightlight</span></div>
+                <div class="achievement-name">Night Shift Operations</div>
+                <div class="achievement-text">Managed the entire global infrastructure solo for 12 months, ensuring uptime for critical trading systems during off-hours. Following this tenure, authored the night-shift training curriculum and mentored two junior engineers to expand the rotation into a sustainable team.
+                </div>
+                <div class="achievement-metric"><span class="material-icons-outlined">person</span> Sole Operator (1 Year)</div>
             </div>
         </div>
     </div>
