@@ -18,10 +18,10 @@
 </head>
 <body>
 <nav>
-    <div class="nav-brand">
+    <a href="#" class="nav-brand">
         <img src="images/logo.svg" alt="VK Logo" class="nav-brand-logo">
         Vishu Kamble
-    </div>
+    </a>
     <ul class="nav-links">
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -232,33 +232,50 @@
             <div class="achievement green">
                 <div class="achievement-icon"><span class="material-icons-outlined">cloud</span></div>
                 <div class="achievement-name">Multi-Cloud Platform Deployment</div>
-                <div class="achievement-text">Orchestrated the Instabase platform deployment across AWS, Azure, and GCP for three major enterprise clients. Standardized the Terraform modules to support diverse environments (OpenShift vs. Native Cloud), ensuring a consistent delivery pipeline regardless of the underlying infrastructure provider.
+                <div class="achievement-text">Orchestrated the Instabase platform deployment across AWS, Azure, and GCP
+                    for three major enterprise clients. Standardized the Terraform modules to support diverse
+                    environments (OpenShift vs. Native Cloud), ensuring a consistent delivery pipeline regardless of the
+                    underlying infrastructure provider.
                 </div>
-                <div class="achievement-metric"><span class="material-icons-outlined">domain</span> 3 Enterprise Clients</div>
+                <div class="achievement-metric"><span class="material-icons-outlined">domain</span> 3 Enterprise Clients
+                </div>
             </div>
 
             <div class="achievement blue">
                 <div class="achievement-icon"><span class="material-icons-outlined">savings</span></div>
                 <div class="achievement-name">S3 Storage Cost Optimization</div>
-                <div class="achievement-text">Reduced S3 storage costs by 87% through implementing lifecycle management policies, versioning rules, and archiving dead buckets. This initiative shrank the storage footprint dramatically without impacting data availability for ongoing customer operations.
+                <div class="achievement-text">Reduced S3 storage costs by 87% through implementing lifecycle management
+                    policies, versioning rules, and archiving dead buckets. This initiative shrank the storage footprint
+                    dramatically without impacting data availability for ongoing customer operations.
                 </div>
-                <div class="achievement-metric"><span class="material-icons-outlined">trending_down</span> 235 TB → 77 TB</div>
+                <div class="achievement-metric"><span class="material-icons-outlined">trending_down</span> 235 TB → 77
+                    TB
+                </div>
             </div>
 
             <div class="achievement orange">
                 <div class="achievement-icon"><span class="material-icons-outlined">notifications_active</span></div>
                 <div class="achievement-name">Real-Time Alerting & EKS Upgrades</div>
-                <div class="achievement-text">Built a Slack bot to monitor "zombie" sandboxes, identifying and decommissioning over 15 stale environments to eliminate cloud waste. Led critical EKS upgrades (1.21 → 1.23) and migrated storage classes from EBS to EFS, ensuring zero downtime for developer workflows.
+                <div class="achievement-text">Built a Slack bot to monitor "zombie" sandboxes, identifying and
+                    decommissioning over 15 stale environments to eliminate cloud waste. Led critical EKS upgrades (1.21
+                    → 1.23) and migrated storage classes from EBS to EFS, ensuring zero downtime for developer
+                    workflows.
                 </div>
-                <div class="achievement-metric"><span class="material-icons-outlined">delete_forever</span> 15+ Envs Pruned</div>
+                <div class="achievement-metric"><span class="material-icons-outlined">delete_forever</span> 15+ Envs
+                    Pruned
+                </div>
             </div>
 
             <div class="achievement purple">
                 <div class="achievement-icon"><span class="material-icons-outlined">cleaning_services</span></div>
                 <div class="achievement-name">Container Image & Security Cleanup</div>
-                <div class="achievement-text">Designed a Python script to identify unused ECR images across active EKS clusters. Implemented ECR lifecycle policies for automated cleanup and addressed vulnerabilities by upgrading base images, significantly reducing the attack surface.
+                <div class="achievement-text">Designed a Python script to identify unused ECR images across active EKS
+                    clusters. Implemented ECR lifecycle policies for automated cleanup and addressed vulnerabilities by
+                    upgrading base images, significantly reducing the attack surface.
                 </div>
-                <div class="achievement-metric"><span class="material-icons-outlined">delete_sweep</span> 140K → 2K Images</div>
+                <div class="achievement-metric"><span class="material-icons-outlined">delete_sweep</span> 140K → 2K
+                    Images
+                </div>
             </div>
         </div>
     </div>
@@ -341,15 +358,22 @@
             <div class="achievement orange">
                 <div class="achievement-icon"><span class="material-icons-outlined">dashboard</span></div>
                 <div class="achievement-name">Luna — Infra Management Platform</div>
-                <div class="achievement-text">Built the central tooling hub adopted by all infrastructure teams (Windows, Network, Storage). Features included a firm-wide "Server Lookup" (locating specific racks/cabinets) and Zabbix API integration to automate maintenance windows, preventing false alerts during patching.
+                <div class="achievement-text">Built the central tooling hub adopted by all infrastructure teams
+                    (Windows, Network, Storage). Features included a firm-wide "Server Lookup" (locating specific
+                    racks/cabinets) and Zabbix API integration to automate maintenance windows, preventing false alerts
+                    during patching.
                 </div>
-                <div class="achievement-metric"><span class="material-icons-outlined">groups</span> 100% Team Adoption</div>
+                <div class="achievement-metric"><span class="material-icons-outlined">groups</span> 100% Team Adoption
+                </div>
             </div>
 
             <div class="achievement teal">
                 <div class="achievement-icon"><span class="material-icons-outlined">network_check</span></div>
                 <div class="achievement-name">Network Monitoring & Datacenter Ops</div>
-                <div class="achievement-text">Developed a custom Python application monitoring over 500 network devices (Cisco, Palo Alto, Arista, Meraki). The tool utilized REST APIs to poll device health in real-time, providing a unified dashboard for internet circuits, VPN tunnels, and telecom status across global offices.
+                <div class="achievement-text">Developed a custom Python application monitoring over 500 network devices
+                    (Cisco, Palo Alto, Arista, Meraki). The tool utilized REST APIs to poll device health in real-time,
+                    providing a unified dashboard for internet circuits, VPN tunnels, and telecom status across global
+                    offices.
                 </div>
                 <div class="achievement-metric"><span class="material-icons-outlined">router</span> 500+ Devices</div>
             </div>
@@ -357,17 +381,25 @@
             <div class="achievement purple">
                 <div class="achievement-icon"><span class="material-icons-outlined">lan</span></div>
                 <div class="achievement-name">Automated Incident Response</div>
-                <div class="achievement-text">Scripted an automated BGP peering check that detected circuit outages instantly. The system auto-created ServiceNow tickets and emailed ISPs with the exact Circuit ID and downtime logs, drastically reducing Mean Time to Detect (MTTD) and eliminating manual vendor triage.
+                <div class="achievement-text">Scripted an automated BGP peering check that detected circuit outages
+                    instantly. The system auto-created ServiceNow tickets and emailed ISPs with the exact Circuit ID and
+                    downtime logs, drastically reducing Mean Time to Detect (MTTD) and eliminating manual vendor triage.
                 </div>
-                <div class="achievement-metric"><span class="material-icons-outlined">bolt</span> Auto-Vendor Ticketing</div>
+                <div class="achievement-metric"><span class="material-icons-outlined">bolt</span> Auto-Vendor Ticketing
+                </div>
             </div>
 
             <div class="achievement blue">
                 <div class="achievement-icon"><span class="material-icons-outlined">nightlight</span></div>
                 <div class="achievement-name">Night Shift Operations</div>
-                <div class="achievement-text">Managed the entire global infrastructure solo for 12 months, ensuring uptime for critical trading systems during off-hours. Following this tenure, authored the night-shift training curriculum and mentored two junior engineers to expand the rotation into a sustainable team.
+                <div class="achievement-text">Managed the entire global infrastructure solo for 12 months, ensuring
+                    uptime for critical trading systems during off-hours. Following this tenure, authored the
+                    night-shift training curriculum and mentored two junior engineers to expand the rotation into a
+                    sustainable team.
                 </div>
-                <div class="achievement-metric"><span class="material-icons-outlined">person</span> Sole Operator (1 Year)</div>
+                <div class="achievement-metric"><span class="material-icons-outlined">person</span> Sole Operator (1
+                    Year)
+                </div>
             </div>
         </div>
     </div>
@@ -489,6 +521,10 @@
     <div class="footer-copy">&copy; 2025 Vishwanath Kamble</div>
 </footer>
 
+<a href="#" class="back-to-top" aria-label="Back to Top">
+    <span class="material-icons-outlined">arrow_upward</span>
+</a>
+
 <script>
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -499,13 +535,36 @@
         });
     }, {rootMargin: '0px 0px -50px 0px', threshold: 0.1});
     document.querySelectorAll('.section-head, .exp-block, .skill-card, .edu-card, .project-card').forEach(el => observer.observe(el));
+
+    // Smooth scrolling for all links
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
             e.preventDefault();
-            const t = document.querySelector(a.getAttribute('href'));
-            if (t) t.scrollIntoView({behavior: 'smooth', block: 'start'});
+            const href = a.getAttribute('href');
+
+            if (href === '#') {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+                return;
+            }
+
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
         });
     });
+
+    // --- THE MISSING PART ---
+    const backToTopBtn = document.querySelector('.back-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
 </script>
+
 </body>
 </html>

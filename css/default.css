@@ -64,8 +64,14 @@ body {
     overflow-x: hidden;
 }
 
-a { text-decoration: none; color: inherit; }
-ul { list-style: none; }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
 
 ::selection {
     background: rgba(56, 189, 248, 0.2);
@@ -107,11 +113,19 @@ nav {
     padding: 8px 16px;
     border-radius: 50px;
     width: fit-content;
+
+    /* Make the Nav Brand feel interactive */
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 .nav-brand-logo {
     width: 32px;
     height: 32px;
+}
+
+nav-brand:hover {
+    transform: scale(1.02); /* Subtle pop effect */
 }
 
 /* 2. Center: The "Floating Dock" Menu */
@@ -126,7 +140,7 @@ nav {
     border: 1px solid var(--border);
     padding: 6px; /* Padding inside the dock */
     border-radius: 100px; /* Pill shape */
-    box-shadow: 0 4px 24px rgba(0,0,0,0.3); /* Nice floating shadow */
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3); /* Nice floating shadow */
 }
 
 /* 3. The Individual Links (Buttons) */
@@ -226,7 +240,7 @@ nav {
     border-radius: 50px;
     background: var(--bg-elevated);
     border: 1px solid var(--border-hover);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     white-space: nowrap;
     z-index: 2;
     width: max-content;
@@ -252,7 +266,7 @@ nav {
     gap: 10px;
     opacity: 0;
     text-decoration: none; /* Removes underline */
-    cursor: pointer;       /* Shows hand cursor */
+    cursor: pointer; /* Shows hand cursor */
     animation: fadeUp 0.6s 1s forwards; /* Delays appearance slightly */
     z-index: 10;
 }
@@ -418,7 +432,7 @@ nav {
     font-size: 0.9rem;
     color: var(--text-secondary);
     padding: 4px 8px;
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.03);
     border-radius: 6px;
 }
 
@@ -503,9 +517,9 @@ nav {
     padding: 1.75rem;
     transition: var(--transition);
 
-    display: flex;              /* 1. Turn on Flexbox */
-    flex-direction: column;     /* 2. Stack items vertically */
-    height: 100%;               /* 3. Force card to fill the grid cell */
+    display: flex; /* 1. Turn on Flexbox */
+    flex-direction: column; /* 2. Stack items vertically */
+    height: 100%; /* 3. Force card to fill the grid cell */
 }
 
 .achievement:hover {
@@ -587,14 +601,14 @@ nav {
 .skill-tag {
     font-size: 0.9rem;
     padding: 6px 12px;
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border);
     border-radius: 6px;
     color: var(--text-secondary);
 }
 
 .skill-tag:hover {
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
     color: var(--text-primary);
 }
 
@@ -645,14 +659,26 @@ footer a:hover {
 
 /* Animations */
 @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.4); }
-    70% { box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 6px rgba(52, 211, 153, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
+    }
 }
 
 /* --- Responsive --- */
@@ -685,4 +711,48 @@ footer a:hover {
     .achievements-grid, .edu-grid, .projects-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* --- Back To Top Button --- */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--blue);
+    color: var(--bg-base); /* Dark icon on blue bg */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+    text-decoration: none;
+    z-index: 9999;
+
+    /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.back-to-top .material-icons-outlined {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* State when visible (triggered by JS) */
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Hover Effect */
+.back-to-top:hover {
+    background: var(--purple); /* Gradients to purple on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(167, 139, 250, 0.5);
+    color: white;
 }
