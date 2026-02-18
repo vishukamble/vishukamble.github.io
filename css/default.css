@@ -1,6 +1,6 @@
 :root {
     /* --- Colors --- */
-    --bg-base: #0b1219; /* Slightly darker for better contrast */
+    --bg-base: #050505;
     --bg-surface: #111c2a;
     --bg-card: #162436;
     --bg-card-hover: #1c2c40;
@@ -56,12 +56,15 @@ html {
 }
 
 body {
-    background: var(--bg-base);
+    background-color: var(--bg-base);
     color: var(--text-primary);
     font-family: var(--font);
-    font-weight: 300;
-    line-height: 1.6;
-    overflow-x: hidden;
+
+    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px);
+    background-size: 50px 50px; /* Controls the distance between dots */
+
+    background-attachment: fixed; /* Keeps dots static while scrolling */
+    min-height: 100vh;
 }
 
 a {
@@ -124,7 +127,7 @@ nav {
     height: 32px;
 }
 
-nav-brand:hover {
+.nav-brand:hover {
     transform: scale(1.02); /* Subtle pop effect */
 }
 
@@ -170,32 +173,19 @@ nav-brand:hover {
     border: 1px solid rgba(56, 189, 248, 0.2);
 }
 
-/* 4. Right: Empty area (needed for the grid trick) */
-/* We don't need CSS here, the grid handles the empty space automatically */
-
 /* --- Hero Section --- */
 .hero {
+    position: relative;
+    background: transparent;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 120px 2rem 80px;
-    position: relative;
-    overflow: hidden;
+    padding-top: 80px;
 }
 
 /* Ambient Background Glow */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    right: 0;
-    width: 60%;
-    height: 600px;
-    background: radial-gradient(circle at center, rgba(56, 189, 248, 0.08) 0%, transparent 60%);
-    pointer-events: none;
-    z-index: -1;
-}
+.hero::before { display: none; }
 
 .hero-content {
     max-width: 1200px;
@@ -260,15 +250,15 @@ nav-brand:hover {
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    opacity: 0;
-    text-decoration: none; /* Removes underline */
-    cursor: pointer; /* Shows hand cursor */
-    animation: fadeUp 0.6s 1s forwards; /* Delays appearance slightly */
+    gap: 12px;
+    text-decoration: none;
     z-index: 10;
+    opacity: 0;
+    animation: fadeUp 0.8s 1s forwards; /* Fade in delay */
 }
 
 .scroll-cta span {
@@ -755,4 +745,73 @@ footer a:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(167, 139, 250, 0.5);
     color: white;
+}
+
+/* --- MOBILE OPTIMIZATIONS --- */
+@media (max-width: 768px) {
+    /* 1. Reset the Navigation Grid */
+    nav {
+        grid-template-columns: 1fr; /* Stack everything */
+        height: auto;
+        padding: 10px 20px;
+        justify-content: center;
+    }
+
+    /* 2. Center the Logo at the Top */
+    .nav-brand {
+        margin: 0 auto; /* Center it */
+        width: fit-content;
+    }
+
+    /* 3. The "Mobile App Dock" (Bottom Menu) */
+    .nav-links {
+        display: flex !important; /* Force it to show */
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        z-index: 1000;
+
+        /* Glassmorphism Container */
+        background: rgba(11, 18, 25, 0.9);
+        backdrop-filter: blur(16px);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 12px;
+
+        /* Scrollable logic */
+        overflow-x: auto;
+        justify-content: flex-start; /* Aligns items to start for scrolling */
+        gap: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+        /* Hide scrollbar visually but keep functionality */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    /* Hide scrollbar for Chrome/Safari */
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* 4. Smaller Buttons for Mobile */
+    .nav-links a {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+        white-space: nowrap; /* Prevents text wrapping */
+        background: rgba(255, 255, 255, 0.05); /* Slight background to see click area */
+    }
+
+    /* 5. Adjust Back-to-Top button to sit ABOVE the mobile menu */
+    .back-to-top {
+        bottom: 90px !important;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .back-to-top .material-icons-outlined {
+        font-size: 20px;
+    }
 }
